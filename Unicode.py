@@ -2,9 +2,18 @@ import os
 import requests
 import html
 
-# Set the output file path
+# Set the output file path for HTML and README
 script_dir = os.path.dirname(os.path.abspath(__file__))
-file_path = os.path.join(script_dir, "Unicode.html")
+# Check if running on GitHub (inside a repository)
+if os.path.exists(os.path.join(script_dir, ".git")):
+    # If running inside a GitHub repository, update in the root directory
+    repo_root_dir = script_dir  # The root directory of the repo
+else:
+    # If running locally, keep the files where the script is located
+    repo_root_dir = script_dir
+
+html_file_path = os.path.join(repo_root_dir, "Unicode.html")
+readme_file_path = os.path.join(repo_root_dir, "README.md")
 
 # Fetch the latest emoji list from Unicode
 url = "https://unicode.org/Public/emoji/latest/emoji-test.txt"
@@ -22,14 +31,14 @@ for line in emoji_data.splitlines():
             codepoints = parts[0].strip()
             rows.append((emoji, codepoints, description))
 
-# Begin HTML
+# Begin HTML content
 html_output = """
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unicode</title>
+    <title>Unicode Emoji List</title>
     <style>
         body { font-family: sans-serif; margin: 0; padding: 20px; display: flex; flex-direction: column; align-items: center; background-color: #f4f4f4; }
         h1 { text-align: center; font-size: 2em; margin-bottom: 20px; color: #333; }
@@ -83,7 +92,7 @@ html_output = """
     </style>
 </head>
 <body>
-    <h1>Unicode</h1>
+    <h1>Unicode Emoji List</h1>
     <input type="text" id="searchInput" placeholder="Search emojis...">
     <table id="emojiTable">
         <thead>
@@ -92,7 +101,7 @@ html_output = """
         <tbody>
 """
 
-# Add emoji rows
+# Add emoji rows to HTML
 for emoji, codepoints, description in rows:
     search_text = f"{emoji} {codepoints} {description}".lower()
     html_output += f"""
@@ -151,7 +160,34 @@ html_output += """
 """
 
 # Write HTML to file
-with open(file_path, "w", encoding="utf-8") as f:
+with open(html_file_path, "w", encoding="utf-8") as f:
     f.write(html_output)
 
-print(f"✅ Emoji page created: {file_path}")
+print(f"✅ Unicode.html created at: {html_file_path}")
+
+# Begin README.md content with Markdown table
+readme_content = """# Unicode Emoji List
+
+This project fetches the latest [Unicode emoji list](https://unicode.org/Public/emoji/latest/emoji-test.txt) and generates a responsive, searchable HTML table of emojis.
+
+## 📄 Output
+
+- `Unicode.html`: An up-to-date emoji viewer with search and copy-to-clipboard functionality.
+- Automatically updated via GitHub Actions every Sunday.
+
+## Emojis:
+
+| Emoji | Codepoints | Description | 
+| ----- | ---------- | ----------- |
+"""
+
+# Add emoji rows to README.md
+for emoji, codepoints, description in rows:
+    readme_content += f"| {emoji} | `{codepoints}` | {description} |\n"
+
+
+# Write README.md to file
+with open(readme_file_path, "w", encoding="utf-8") as f:
+    f.write(readme_content)
+
+print(f"✅ README.md created at: {readme_file_path}")
