@@ -1,11 +1,7 @@
-# Unicode Emoji List
+## License
 
-This project fetches the latest [Unicode emoji list](https://unicode.org/Public/emoji/latest/emoji-test.txt) and generates a responsive, searchable HTML table of emojis.
-
-## 📄 Output
-
-- `Unicode.html`: An up-to-date emoji viewer with search and copy-to-clipboard functionality.
-- Automatically updated via GitHub Actions every Sunday.
+- **Code**: This repository is licensed under the MIT License. See the `LICENSE` file for more details.
+- **Unicode Emoji Data**: This repository includes emoji data sourced from the [Unicode Consortium](https://www.unicode.org) under the terms of the [Unicode License](https://www.unicode.org/copyright.html).
 
 ## Emojis:
 
