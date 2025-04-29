@@ -4,16 +4,8 @@ import html
 
 # Set the output file path for HTML and README
 script_dir = os.path.dirname(os.path.abspath(__file__))
-# Check if running on GitHub (inside a repository)
-if os.path.exists(os.path.join(script_dir, ".git")):
-    # If running inside a GitHub repository, update in the root directory
-    repo_root_dir = script_dir  # The root directory of the repo
-else:
-    # If running locally, keep the files where the script is located
-    repo_root_dir = script_dir
-
-html_file_path = os.path.join(repo_root_dir, "Unicode.html")
-readme_file_path = os.path.join(repo_root_dir, "README.md")
+html_file_path = os.path.join(script_dir, "Unicode.html")
+readme_file_path = os.path.join(script_dir, "README.md")
 
 # Fetch the latest emoji list from Unicode
 url = "https://unicode.org/Public/emoji/latest/emoji-test.txt"
@@ -111,7 +103,7 @@ for emoji, codepoints, description in rows:
             <td>{html.escape(description)}</td>
             <td><button onclick="copyToClipboard(event, '{emoji}')" class="copy-btn">Copy</button></td>
         </tr>
-    """
+    """ 
 
 # Close HTML
 html_output += """
@@ -165,15 +157,11 @@ with open(html_file_path, "w", encoding="utf-8") as f:
 
 print(f"✅ Unicode.html created at: {html_file_path}")
 
-# Begin README.md content with Markdown table
-readme_content = """# Unicode Emoji List
+# Begin README.md content with Markdown table (Updated)
+readme_content = """## License
 
-This project fetches the latest [Unicode emoji list](https://unicode.org/Public/emoji/latest/emoji-test.txt) and generates a responsive, searchable HTML table of emojis.
-
-## 📄 Output
-
-- `Unicode.html`: An up-to-date emoji viewer with search and copy-to-clipboard functionality.
-- Automatically updated via GitHub Actions every Sunday.
+- **Code**: This repository is licensed under the MIT License. See the `LICENSE` file for more details.
+- **Unicode Emoji Data**: This repository includes emoji data sourced from the [Unicode Consortium](https://www.unicode.org) under the terms of the [Unicode License](https://www.unicode.org/copyright.html).
 
 ## Emojis:
 
@@ -184,7 +172,6 @@ This project fetches the latest [Unicode emoji list](https://unicode.org/Public/
 # Add emoji rows to README.md
 for emoji, codepoints, description in rows:
     readme_content += f"| {emoji} | `{codepoints}` | {description} |\n"
-
 
 # Write README.md to file
 with open(readme_file_path, "w", encoding="utf-8") as f:
