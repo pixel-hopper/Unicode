@@ -2,7 +2,6 @@
 
 | Emoji | Codepoints | Description | 
 | ----- | ---------- | ----------- |
-
 | 😇 | `1F607` | E1.0 smiling face with halo |
 | 🥰 | `1F970` | E11.0 smiling face with hearts |
 | 😍 | `1F60D` | E0.6 smiling face with heart-eyes |
