@@ -1,4 +1,23 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unicode Emoji List</title>
+    <style>
+        body { font-family: sans-serif; margin: 0; padding: 20px; display: flex; flex-direction: column; align-items: center; background-color: #f4f4f4; }
+        h1 { text-align: center; font-size: 2em; margin-bottom: 20px; color: #333; }
+        input[type="text"] {
+            width: 100%%;
+            max-width: 600px;
+            padding: 12px;
+            margin-bottom: 20px;
+            font-size: 1.2em;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
         table {
             width: 100%%;
             max-width: 1000px;
@@ -30,6 +49,40 @@
         }
         .copy-btn:hover {
             background-color: #ddd;
+        }
+        @media (max-width: 600px) {
+            h1 { font-size: 1.6em; }
+            table { font-size: 0.9em; width: 90%%; }
+            input[type="text"] { font-size: 1em; padding: 10px; }
+        }
+    </style>
+</head>
+<body>
+    <h1>Unicode Emoji List</h1>
+    <input type="text" id="searchInput" placeholder="Search emojis...">
+    <table id="emojiTable">
+        <thead>
+            <tr><th>Emoji</th><th>Codepoints</th><th>Description</th><th>Copy</th></tr>
+        </thead>
+        <tbody>
+
+        <tr data-search="😀 1f600 e1.0 grinning face">
+            <td class='emoji'>😀</td>
+            <td>1F600</td>
+            <td>E1.0 grinning face</td>
+            <td><button onclick="copyToClipboard(event, '😀')" class="copy-btn">Copy</button></td>
+        </tr>
+    
+        <tr data-search="😃 1f603 e0.6 grinning face with big eyes">
+            <td class='emoji'>😃</td>
+            <td>1F603</td>
+            <td>E0.6 grinning face with big eyes</td>
+            <td><button onclick="copyToClipboard(event, '😃')" class="copy-btn">Copy</button></td>
+        </tr>
+    
+        <tr data-search="😄 1f604 e0.6 grinning face with smiling eyes">
+            <td class='emoji'>😄</td>
+            <td>1F604</td>
             <td>E0.6 grinning face with smiling eyes</td>
             <td><button onclick="copyToClipboard(event, '😄')" class="copy-btn">Copy</button></td>
         </tr>
