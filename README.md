@@ -2,32 +2,6 @@
 
 | Emoji | Codepoints | Description | 
 | ----- | ---------- | ----------- |
-| 😀 | `1F600` | E1.0 grinning face |
-| 😃 | `1F603` | E0.6 grinning face with big eyes |
-| 😄 | `1F604` | E0.6 grinning face with smiling eyes |
-| 😁 | `1F601` | E0.6 beaming face with smiling eyes |
-| 😆 | `1F606` | E0.6 grinning squinting face |
-| 😅 | `1F605` | E0.6 grinning face with sweat |
-| 🤣 | `1F923` | E3.0 rolling on the floor laughing |
-| 😂 | `1F602` | E0.6 face with tears of joy |
-| 🙂 | `1F642` | E1.0 slightly smiling face |
-| 🙃 | `1F643` | E1.0 upside-down face |
-| 🫠 | `1FAE0` | E14.0 melting face |
-| 😉 | `1F609` | E0.6 winking face |
-| 😊 | `1F60A` | E0.6 smiling face with smiling eyes |
-| 😇 | `1F607` | E1.0 smiling face with halo |
-| 🥰 | `1F970` | E11.0 smiling face with hearts |
-| 😍 | `1F60D` | E0.6 smiling face with heart-eyes |
-| 🤩 | `1F929` | E5.0 star-struck |
-| 😘 | `1F618` | E0.6 face blowing a kiss |
-| 😗 | `1F617` | E1.0 kissing face |
-| ☺️ | `263A FE0F` | E0.6 smiling face |
-| 😚 | `1F61A` | E0.6 kissing face with closed eyes |
-| 😙 | `1F619` | E1.0 kissing face with smiling eyes |
-| 🥲 | `1F972` | E13.0 smiling face with tear |
-| 😋 | `1F60B` | E0.6 face savoring food |
-| 😛 | `1F61B` | E1.0 face with tongue |
-| 😜 | `1F61C` | E0.6 winking face with tongue |
 | 🤪 | `1F92A` | E5.0 zany face |
 | 😝 | `1F61D` | E0.6 squinting face with tongue |
 | 🤑 | `1F911` | E1.0 money-mouth face |
