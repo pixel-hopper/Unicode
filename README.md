@@ -1,7 +1,29 @@
+# Unicode Emoji List
+
+This project fetches the latest [Unicode emoji list](https://unicode.org/Public/emoji/latest/emoji-test.txt) and generates a responsive, searchable HTML table of emojis.
+
+## 📄 Output
+
+- `Unicode.html`: An up-to-date emoji viewer with search and copy-to-clipboard functionality.
+- Automatically updated via GitHub Actions every Sunday.
+
 ## Emojis:
 
 | Emoji | Codepoints | Description | 
 | ----- | ---------- | ----------- |
+| 😀 | `1F600` | E1.0 grinning face |
+| 😃 | `1F603` | E0.6 grinning face with big eyes |
+| 😄 | `1F604` | E0.6 grinning face with smiling eyes |
+| 😁 | `1F601` | E0.6 beaming face with smiling eyes |
+| 😆 | `1F606` | E0.6 grinning squinting face |
+| 😅 | `1F605` | E0.6 grinning face with sweat |
+| 🤣 | `1F923` | E3.0 rolling on the floor laughing |
+| 😂 | `1F602` | E0.6 face with tears of joy |
+| 🙂 | `1F642` | E1.0 slightly smiling face |
+| 🙃 | `1F643` | E1.0 upside-down face |
+| 🫠 | `1FAE0` | E14.0 melting face |
+| 😉 | `1F609` | E0.6 winking face |
+| 😊 | `1F60A` | E0.6 smiling face with smiling eyes |
 | 😇 | `1F607` | E1.0 smiling face with halo |
 | 🥰 | `1F970` | E11.0 smiling face with hearts |
 | 😍 | `1F60D` | E0.6 smiling face with heart-eyes |
