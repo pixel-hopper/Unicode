@@ -15,6 +15,8 @@ jobs:
     steps:
       - name: 📦 Checkout repository
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # Ensure full history is fetched
 
       - name: 🐍 Set up Python
         uses: actions/setup-python@v4
@@ -37,5 +39,7 @@ jobs:
 
       - name: 💾 Commit and push changes
         run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
           git commit -m "Auto-update Unicode emoji list" || echo "No changes to commit"
-          git push
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/Pixel-Hopper/Unicode.git
