@@ -3,34 +3,39 @@ name: Unicode Emoji Auto Update
 on:
   schedule:
     - cron: '0 0 * * 0'  # Every Sunday at 00:00 UTC
-  workflow_dispatch:     # Allows manual trigger
+  workflow_dispatch:      # Allow manual runs
   push:
     paths:
-      - Unicode.py       # Optionally rerun if the script changes
+      - Unicode.py        # Re-run if this file changes
 
 jobs:
   update_unicode:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: 📦 Checkout repository
         uses: actions/checkout@v3
 
-      - name: Set up Python
+      - name: 🐍 Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.x'
 
-      - name: Install requests
+      - name: 📥 Install dependencies
         run: pip install requests
 
-      - name: Run Unicode update script
+      - name: 🛠 Run Unicode update script
         run: python Unicode.py
 
-      - name: Commit and push changes
+      - name: 🔍 Show git status
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          git status
           git add Unicode.html README.md
+          git diff --staged
+
+      - name: 💾 Commit and push changes
+        run: |
           git commit -m "Auto-update Unicode emoji list" || echo "No changes to commit"
           git push
