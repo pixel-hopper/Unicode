@@ -4,9 +4,11 @@
   <table>
     <tr>
       <td>
-        <a href="https://pixel-hopper.github.io/Unicode/Unicode.html" style="text-decoration: none; color: inherit;">
-        🔍 Unicode Search Bar 🔍
-        </a>
+        <h2>
+          <a href="https://pixel-hopper.github.io/Unicode/Unicode.html" style="text-decoration: none; color: inherit;">
+            🔍 Unicode Search Bar 🔍
+          </a>
+        </h2>
       </td>
     </tr>
   </table>
