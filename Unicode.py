@@ -160,10 +160,9 @@ print(f"✅ Unicode.html created at: {html_file_path}")
 # Begin README.md content with Markdown table (Updated)
 readme_content = """## License
 
-- **Code**: This repository is licensed under the MIT License. See the `LICENSE` file for more details.
-- **Unicode Emoji Data**: This repository includes emoji data sourced from the [Unicode Consortium](https://www.unicode.org) under the terms of the [Unicode License](https://www.unicode.org/copyright.html).  
-  - This data is © Unicode, Inc. and distributed under the Unicode License Agreement.  
-  - A copy of the Unicode License is included in this repository as `UNICODE-LICENSE.txt`.
+- This repository includes emoji data sourced from the [Unicode Consortium](https://www.unicode.org) under the terms of the [Unicode License](https://www.unicode.org/copyright.html).  
+- A copy of the Unicode License is included in this repository as `UNICODE-LICENSE.txt`.
+- This repository is licensed under the MIT License. See the `LICENSE` file for more details.
 
 ## Emojis:
 
