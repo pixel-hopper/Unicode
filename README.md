@@ -13,7 +13,6 @@
 
 | Emoji | Codepoints | Description | 
 | ----- | ---------- | ----------- |
-
 | 😀 | `1F600` | E1.0 grinning face |
 | 😃 | `1F603` | E0.6 grinning face with big eyes |
 | 😄 | `1F604` | E0.6 grinning face with smiling eyes |
