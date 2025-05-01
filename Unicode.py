@@ -1,6 +1,7 @@
 import os
 import requests
 import html
+import base64
 
 # Set the output file path for HTML and README
 script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -23,19 +24,33 @@ for line in emoji_data.splitlines():
             codepoints = parts[0].strip()
             rows.append((emoji, codepoints, description))
 
-# Begin HTML content
-html_output = """
+# Create SVG for the 👽 emoji
+svg_content = """
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <text x="0" y="50" font-size="50" font-family="Arial, sans-serif">👽</text>
+</svg>
+"""
+
+# Base64 encode the SVG content
+encoded_svg = base64.b64encode(svg_content.encode('utf-8')).decode('utf-8')
+
+# Begin HTML content (adding favicon here)
+html_output = f"""
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unicode Emoji List</title>
+    
+    <!-- Favicon (Base64 encoded SVG with emoji) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,{encoded_svg}">
+    
     <style>
-        body { font-family: sans-serif; margin: 0; padding: 20px; display: flex; flex-direction: column; align-items: center; background-color: #f4f4f4; }
-        h1 { text-align: center; font-size: 2em; margin-bottom: 20px; color: #333; }
-        input[type="text"] {
-            width: 100%%;
+        body {{ font-family: sans-serif; margin: 0; padding: 20px; display: flex; flex-direction: column; align-items: center; background-color: #f4f4f4; }}
+        h1 {{ text-align: center; font-size: 2em; margin-bottom: 20px; color: #333; }}
+        input[type="text"] {{
+            width: 100%;
             max-width: 600px;
             padding: 12px;
             margin-bottom: 20px;
@@ -43,44 +58,44 @@ html_output = """
             border: 2px solid #ccc;
             border-radius: 5px;
             box-sizing: border-box;
-        }
-        table {
-            width: 100%%;
+        }}
+        table {{
+            width: 100%;
             max-width: 1000px;
             border-collapse: collapse;
             box-sizing: border-box;
-        }
-        th, td {
+        }}
+        th, td {{
             padding: 12px 15px;
             text-align: left;
             border: 1px solid #ddd;
-        }
-        th {
+        }}
+        th {{
             background-color: #f2f2f2;
             font-weight: bold;
-        }
-        td.emoji {
+        }}
+        td.emoji {{
             font-size: 1.5em;
-        }
-        tr.hidden {
+        }}
+        tr.hidden {{
             display: none;
-        }
-        .copy-btn {
+        }}
+        .copy-btn {{
             padding: 4px 8px;
             font-size: 0.9em;
             cursor: pointer;
             background-color: #eee;
             border: 1px solid #ccc;
             border-radius: 4px;
-        }
-        .copy-btn:hover {
+        }}
+        .copy-btn:hover {{
             background-color: #ddd;
-        }
-        @media (max-width: 600px) {
-            h1 { font-size: 1.6em; }
-            table { font-size: 0.9em; width: 90%%; }
-            input[type="text"] { font-size: 1em; padding: 10px; }
-        }
+        }}
+        @media (max-width: 600px) {{
+            h1 {{ font-size: 1.6em; }}
+            table {{ font-size: 0.9em; width: 90%; }}
+            input[type="text"] {{ font-size: 1em; padding: 10px; }}
+        }}
     </style>
 </head>
 <body>
