@@ -1,8 +1,7 @@
 
 
-<h2 align="center">
-  <a href="https://pixel-hopper.github.io/Unicode/Unicode.html"><strong>Unicode Search Bar</strong></a>
-</h2>
+| [**🔍 Unicode Search Bar**](https://pixel-hopper.github.io/Unicode/Unicode.html) |
+|:--------------------------------------------------------------------------------:|
 
 <h2>License</h2>
 
