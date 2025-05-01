@@ -1,8 +1,7 @@
 ## License
 
-- This repository includes data sourced from the [Unicode Consortium](https://www.unicode.org) under the terms of the [Unicode License](https://www.unicode.org/copyright.html).  
-- The Unicode License is included in this repository as `UNICODE-LICENSE`
-- The code in this repository is licensed under the MIT License `LICENSE`
+- Unicode data from the Unicode Consortium under the Unicode License, in UNICODE-LICENSE.
+- Code from this repository is licensed under the MIT License, in LICENSE.
 
 ## Emojis:
 
