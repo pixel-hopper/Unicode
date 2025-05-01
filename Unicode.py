@@ -160,9 +160,8 @@ print(f"✅ Unicode.html created at: {html_file_path}")
 # Begin README.md content with Markdown table (Updated)
 readme_content = """
 
-<h2 align="center">
-  <a href="https://pixel-hopper.github.io/Unicode/Unicode.html"><strong>Unicode Search Bar</strong></a>
-</h2>
+| [**🔍 Unicode Search Bar**](https://pixel-hopper.github.io/Unicode/Unicode.html) |
+|:--------------------------------------------------------------------------------:|
 
 <h2>License</h2>
 
