@@ -163,13 +163,15 @@ readme_content = """
 <div align="center">
   <table>
     <tr>
-      <td align="center">
-        <h2>🔍 Unicode Search Bar</h2>
-        <p><a href="https://pixel-hopper.github.io/Unicode/Unicode.html">https://pixel-hopper.github.io/Unicode/Unicode.html</a></p>
+      <td>
+        <a href="https://pixel-hopper.github.io/Unicode/Unicode.html" style="text-decoration: none; color: inherit;">
+        🔍 Unicode Search Bar 🔍
+        </a>
       </td>
     </tr>
   </table>
 </div>
+
 
 <h2>License</h2>
 
