@@ -19,3 +19,14 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+---
+
+## Unicode Emoji Data Licensing
+
+This repository includes data derived from the Unicode Consortium's Unicode Emoji data.
+
+Such data is © Unicode, Inc. and made available under the terms of the Unicode License Agreement:
+https://www.unicode.org/license.html
+
+You must comply with the terms of the Unicode License when using this data.
