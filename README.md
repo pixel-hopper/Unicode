@@ -1,6 +1,8 @@
 
 
-## Search [Unicode](https://pixel-hopper.github.io/Unicode/Unicode.html).
+<p align="center">
+  ## <a href="https://pixel-hopper.github.io/Unicode/Unicode.html">Unicode Search Bar</a>
+</p>
 
 ## License
 
