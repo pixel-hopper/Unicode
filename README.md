@@ -1,7 +1,18 @@
 
 
-| [**🔍 Unicode Search Bar**](https://pixel-hopper.github.io/Unicode/Unicode.html) |
-|:--------------------------------------------------------------------------------:|
+<div align="center">
+  <table>
+    <tr>
+      <td>
+        <h2>
+          <a href="https://pixel-hopper.github.io/Unicode/Unicode.html" style="text-decoration: none; color: inherit;">
+            🔍 Unicode Search Bar
+          </a>
+        </h2>
+      </td>
+    </tr>
+  </table>
+</div>
 
 <h2>License</h2>
 
