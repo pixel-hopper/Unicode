@@ -24,9 +24,11 @@ SOFTWARE.
 
 ## Unicode Emoji Data Licensing
 
-This repository includes data derived from the Unicode Consortium's Unicode Emoji data.
+This repository includes emoji data derived from the Unicode Consortium.
 
-Such data is © Unicode, Inc. and made available under the terms of the Unicode License Agreement:
+Such data is © Unicode, Inc. and distributed under the Unicode License Agreement.
+
+You can find the full Unicode License at:
 https://www.unicode.org/license.html
 
-You must comply with the terms of the Unicode License when using this data.
+A copy is also included in this repository as `UNICODE-LICENSE.txt`.
