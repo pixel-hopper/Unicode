@@ -173,7 +173,6 @@ readme_content = """
 
 | Emoji | Codepoints | Description | 
 | ----- | ---------- | ----------- |
-
 """
 
 # Add emoji rows to README.md
