@@ -176,11 +176,15 @@ print(f"✅ Unicode.html created at: {html_file_path}")
 readme_content = """
 
 <div align="center">
- <h2>
-   <a href="https://pixel-hopper.github.io/Unicode/Unicode.html" style="text-decoration: none; color: inherit;">
-     🔍 Unicode Search Bar 🔍
-   </a>
- </h2>
+ <tr>
+      <td>
+        <h2>
+          <a href="https://pixel-hopper.github.io/Unicode/Unicode.html" style="text-decoration: none; color: inherit;">
+            🔍 Unicode Search Bar 🔍
+          </a>
+        </h2>
+      </td>
+    </tr>
 </div>
 
 
