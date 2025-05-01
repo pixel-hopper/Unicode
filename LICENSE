@@ -20,15 +20,4 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
----
-
-## Unicode Emoji Data Licensing
-
-This repository includes emoji data derived from the Unicode Consortium.
-
-Such data is © Unicode, Inc. and distributed under the Unicode License Agreement.
-
-You can find the full Unicode License at:
-https://www.unicode.org/license.html
-
-A copy is also included in this repository as `UNICODE-LICENSE.txt`.
+Note: This project includes data from the Unicode Consortium under a separate license. See unicode-license.txt.
