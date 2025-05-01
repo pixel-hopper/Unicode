@@ -159,15 +159,19 @@ print(f"✅ Unicode.html created at: {html_file_path}")
 
 # Begin README.md content with Markdown table (Updated)
 readme_content = """
+
 <h2 align="center">
   <a href="https://pixel-hopper.github.io/Unicode/Unicode.html">Unicode Search Bar</a>
 </h2>
 ## License
+
 - Unicode data is sourced from the [Unicode Consortium](https://www.unicode.org) under the [Unicode License](https://www.unicode.org/copyright.html), in `UNICODE-LICENSE`
-- The code in this repository is licensed under the [MIT License](https://opensource.org/licenses/MIT), for more details take a look at `LICENSE` 
+- The code in this repository is licensed under the [MIT License](https://opensource.org/licenses/MIT), for more details take a look at `LICENSE`
+    
 ## Emojis:
 | Emoji | Codepoints | Description | 
 | ----- | ---------- | ----------- |
+
 """
 
 # Add emoji rows to README.md
