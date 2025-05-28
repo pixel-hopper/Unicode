@@ -10,17 +10,51 @@
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCI+CiAgPHRleHQgeD0iMCIgeT0iNTAiIGZvbnQtc2l6ZT0iNTAiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiI+8J+RvTwvdGV4dD4KPC9zdmc+Cg==">
     
     <style>
-        body { font-family: sans-serif; margin: 0; padding: 20px; display: flex; flex-direction: column; align-items: center; background-color: #f4f4f4; }
-        h1 { text-align: center; font-size: 2em; margin-bottom: 20px; color: #333; }
+        :root {
+            --bg-color: #f4f4f4;
+            --text-color: #333;
+            --header-bg: #f2f2f2;
+            --border-color: #ddd;
+            --hover-color: #eee;
+            --input-bg: #fff;
+            --input-border: #ccc;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #1e1e1e;
+                --text-color: #e0e0e0;
+                --header-bg: #2d2d2d;
+                --border-color: #444;
+                --hover-color: #3a3a3a;
+                --input-bg: #2d2d2d;
+                --input-border: #555;
+            }
+        }
+
+        body {
+            font-family: sans-serif; 
+            margin: 0; 
+            padding: 20px; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        h1 { text-align: center; font-size: 2em; margin-bottom: 20px; color: var(--text-color); }
         input[type="text"] {
             width: 100%;
             max-width: 600px;
             padding: 12px;
             margin-bottom: 20px;
             font-size: 1.2em;
-            border: 2px solid #ccc;
+            border: 2px solid var(--input-border);
             border-radius: 5px;
             box-sizing: border-box;
+            background-color: var(--input-bg);
+            color: var(--text-color);
         }
         table {
             width: 100%;
@@ -31,10 +65,10 @@
         th, td {
             padding: 12px 15px;
             text-align: left;
-            border: 1px solid #ddd;
+            border: 1px solid var(--border-color);
         }
         th {
-            background-color: #f2f2f2;
+            background-color: var(--header-bg);
             font-weight: bold;
         }
         td.emoji {
@@ -47,12 +81,13 @@
             padding: 4px 8px;
             font-size: 0.9em;
             cursor: pointer;
-            background-color: #eee;
-            border: 1px solid #ccc;
+            background-color: var(--hover-color);
+            border: 1px solid var(--border-color);
             border-radius: 4px;
+            color: var(--text-color);
         }
         .copy-btn:hover {
-            background-color: #ddd;
+            background-color: var(--border-color);
         }
         @media (max-width: 600px) {
             h1 { font-size: 1.6em; }
