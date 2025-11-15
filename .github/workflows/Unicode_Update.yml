@@ -8,18 +8,22 @@ on:
     paths:
       - Unicode.py        # Re-run if this file changes
 
+permissions:
+  contents: write  # IMPORTANT: Allows the workflow to push changes
+
 jobs:
   update_unicode:
     runs-on: ubuntu-latest
 
     steps:
       - name: 📦 Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # Ensure full history is fetched
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: 🐍 Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.x'
 
@@ -29,17 +33,16 @@ jobs:
       - name: 🛠 Run Unicode update script
         run: python Unicode.py
 
-      - name: 🔍 Show git status
+      - name: 🔍 Check for changes
+        id: check_changes
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git status
-          git add Unicode.html README.md
-          git diff --staged
+          git diff --quiet Unicode.html README.md || echo "changes=true" >> $GITHUB_OUTPUT
 
       - name: 💾 Commit and push changes
+        if: steps.check_changes.outputs.changes == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git commit -m "Auto-update Unicode emoji list" || echo "No changes to commit"
-          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/Pixel-Hopper/Unicode.git
+          git add Unicode.html README.md
+          git commit -m "🔄 Auto-update Unicode emoji list [skip ci]"
+          git push
